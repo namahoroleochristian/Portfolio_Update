@@ -179,13 +179,15 @@ function About() {
         <h2 className="text-2xl md:text-3xl font-semibold">My Skills</h2>
         <p className="text-stone-600">Backend | Frontend | CyberSecurity</p>
       </header>
-      <div className="grid grid-cols-5 sm:grid-cols-5 lg:grid-cols-5 gap-1  mt-6 hover:cursor-pointer">
-        {skills.map((s) => (
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1 mt-6">
+        {skills.map((skill, i) => (
           <div
-            key={s.name}
-            className="rounded-xl border border-stone-200 p-4 px-2 hover:shadow-sm transition bg-stone-50"
+            key={i}
+            className="rounded-xl cursor-pointer border border-stone-200 p-1 flex flex-col items-center hover:shadow-sm transition bg-stone-50"
           >
-            <div className="text-sm font-medium">{s.name}</div>
+            <i className={skill.icon} aria-label={skill.name} style={{ fontSize: "2rem" }} />
+            <span className=" text-sm  font-medium">{skill.name}</span>
           </div>
         ))}
       </div>
