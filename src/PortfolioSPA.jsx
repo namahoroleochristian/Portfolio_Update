@@ -3,22 +3,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Github, Linkedin, Mail, Phone, Instagram } from "lucide-react";
 import IMG from '../src/images/home-img.jpg'
 
-/**
- * Single-file React SPA Portfolio for Leo Christian
- * - Minimal, professional, no-scrolling layout
- * - Static left panel with photo + name
- * - Top-right navigation
- * - Sections slide in/out on click
- * - Tailwind CSS recommended (works in this preview). No extra CSS required.
- *
- * How to use in your project:
- * 1) Ensure Tailwind is set up (or keep as-is if using this preview).
- * 2) Put your photo in the /public folder and update PHOTO_URL below.
- * 3) Replace links, text, and contact details with your real info.
- */
+
 
 const PHOTO_URL = IMG
-   // Replace with /your-photo.png
+   
 
 const SECTIONS = [
   { id: "home", label: "Home" },
@@ -160,15 +148,15 @@ function About() {
     { name: "Vue.js", icon: "lab la-vuejs" },
     { name: "PHP", icon: "lab la-php" },
     { name: "Laravel", icon: "lab la-laravel" },
-    { name: "Laravel", icon: "lab la-laravel" },
-    { name: "Laravel", icon: "lab la-laravel" },
-    { name: "Laravel", icon: "lab la-laravel" },
-    { name: "Laravel", icon: "lab la-laravel" },
-    { name: "Laravel", icon: "lab la-laravel" },
-    { name: "Laravel", icon: "lab la-laravel" },
-    { name: "Laravel", icon: "lab la-laravel" },
-    { name: "Laravel", icon: "lab la-laravel" },
-    { name: "Laravel", icon: "lab la-laravel" },
+    { name: "Flutter", icon: "las la-gem" },
+    { name: "Python", icon: "lab la-python" },
+    { name: "Web3", icon: "lab la-ethereum" },
+    { name: "MySQL", icon: "las la-database" },
+    { name: "MongoDB", icon: "las la-leaf" },
+    { name: "Linux", icon: "lab la-linux" },
+    { name: "React", icon: "lab la-react" },
+    // { name: "flask", icon: "las " },
+    { name: "ML/AI", icon: "las la-project-diagram" },
     { name: "Git", icon: "lab la-git-alt" },
     { name: "Java", icon: "lab la-java" },
   ];
@@ -249,12 +237,12 @@ function Experience() {
 
       <div className="mt-6 grid gap-4">
         <ExperienceItem
-          role="Junior Developer Intern"
+          role=" Developer Intern"
           year="2024"
           org="MINECOFIN — Integrated Financial Management Systems"
         />
         <ExperienceItem
-          role="Senior Developer Intern"
+          role=" Developer Intern"
           year="2025"
           org="SALTEL — Software Design & Development"
           />
@@ -317,14 +305,24 @@ function EducationItem({ title, period, desc }) {
 function Projects() {
   const projects = [
     {
-      name: "Portfolio SPA",
-      summary: "This site — React + Framer Motion SPA with a static photo panel.",
-      link: "#",
+      name: "Soma Online School (UI/UX)",
+      summary: " Sickness or vacation? Keep learning! Soma was designed to help you stay on track with your studies, providing resources for when you're at home (unwell or on break)",
+      link: "https://www.figma.com/proto/oa0B0kTn2GJblyHrRxtBf9/Untitled?node-id=0-1&p=f&t=Aso55ikrIFudVf7T-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3",
     },
     {
-      name: "Smart Park (Demo)",
-      summary: "Parking management web app using Node.js, Express, React.",
-      link: "#",
+      name: "Vistors Management System (VMS)  UI/UX",
+      summary: " Allows user to track vistors and visted individuals on visiting days, it can be used in schools,Hospitals, correctional facilities and others.",
+      link: "https://www.figma.com/proto/rUUxSGQEY2L5mEgOZm6ytA/VMS?node-id=0-1&p=f&t=6gukULwD8PEOnwnc-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A2",
+    },
+    {
+      name: "Digital Portfolio Management system ",
+      summary: " vue-js based Digital Portfolio management System is a software application that helps TVET schools to manage to manage students portfolio data by making them accessible anytime anywhere.",
+      link: "https://github.com/namahoroleochristian/learners-portfolio-solution",
+    },
+    {
+      name: "Tax Management System ",
+      summary: "Mobile first cross platform made to enable business owners to calculate their taxes automatically from sales made and generate reports and statstics.Made with REST API using Nodejs and mongoDB for database UI with Google's Flutter framework",
+      link: "https://github.com/namahoroleochristian/mobile_shop_tax_manager",
     },
   ];
 
@@ -332,7 +330,7 @@ function Projects() {
     <div className="h-full flex flex-col">
       <header>
         <h2 className="text-2xl md:text-3xl font-semibold">Projects</h2>
-        <p className="text-stone-600">Selected work and experiments</p>
+        <p className="text-stone-600">Selected work and experiments Click to visit project</p>
       </header>
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         {projects.map((p) => (
@@ -352,14 +350,14 @@ function Projects() {
 
 function Contact() {
   return (
-    <div className="h-full grid grid-rows-[1fr_auto] gap-6">
-      <div className="max-w-xl">
-        <h2 className="text-2xl md:text-3xl font-semibold">Say hello…</h2>
-        <form className="mt-4 grid gap-3">
+    <div className="h-full grid grid-rows-[1fr_auto] gap-6 ">
+      <div className=" ml-14 max-w-xl">
+        <h2 className="text-2xl text-center md:text-3xl font-semibold">Get in touch</h2>
+        <form className="mt-4 grid gap-3 ">
           <input className="h-11 rounded-xl border border-stone-300 px-4" placeholder="Your Name" />
           <input className="h-11 rounded-xl border border-stone-300 px-4" placeholder="Your Email" type="email" />
           <textarea className="min-h-[120px] rounded-xl border border-stone-300 p-4" placeholder="Write your message…" />
-          <button type="button" className="h-11 rounded-xl bg-stone-900 text-white px-6 w-max">Send</button>
+          <button type="button" className="h-11 cursor-pointer rounded-xl bg-stone-900 text-white px-6 hover:text-stone-900 hover:bg-white border hover:border-bg-stone-900 transition duration-300">Send</button>
         </form>
       </div>
 
