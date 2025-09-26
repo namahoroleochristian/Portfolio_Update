@@ -357,7 +357,7 @@ function Contact() {
           <input className="h-11 rounded-xl border border-stone-300 px-4" placeholder="Your Name" />
           <input className="h-11 rounded-xl border border-stone-300 px-4" placeholder="Your Email" type="email" />
           <textarea className="min-h-[120px] rounded-xl border border-stone-300 p-4" placeholder="Write your message…" />
-          <button type="button" className="h-11 cursor-pointer rounded-xl bg-stone-900 text-white px-6 hover:text-stone-900 hover:bg-white border hover:border-bg-stone-900 transition duration-300">Send</button>
+          <button type="submit"  className="h-11 cursor-pointer rounded-xl bg-stone-900 text-white px-6 hover:text-stone-900 hover:bg-white border hover:border-bg-stone-900 transition duration-300">Send</button>
         </form>
       </div>
 
